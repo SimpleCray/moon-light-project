@@ -81,7 +81,6 @@ section img {
 }
 section img#moon {
     mix-blend-mode: screen;
-    top: 50px;
 }
 section img#mountains_front {
     z-index: 10;
