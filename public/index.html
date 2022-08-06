@@ -25,31 +25,29 @@
             <a href="" id="btn">Explore</a>
             <img src="resources/mountains_front.png" id="mountains_front" />
         </section>
-        <div class="sec">
+        <div class="sec" id="sec">
             <h2>Parallax Scrolling Effects</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel metus ut urna feugiat facilisis sit amet ac mauris. Cras non laoreet purus,
                 in accumsan quam. Aliquam erat volutpat. Fusce eu diam ultricies, feugiat neque ac, dapibus diam. Duis tempus lacus eu lectus luctus faucibus.
                 Aliquam iaculis tortor sit amet elit tristique, eget varius ex aliquam. Praesent sed hendrerit est, in sagittis lacus. Ut accumsan, ligula vel
-                luctus condimentum, lorem mauris pulvinar eros, a venenatis tellus erat et purus. Donec vel metus ut urna feugiat facilisis sit amet ac mauris. Cras non laoreet purus,
-                in accumsan quam. Aliquam erat volutpat. Fusce eu diam ultricies, feugiat neque ac, dapibus diam.
-                <br/><br/>
-                Nam nec pharetra dui. Donec commodo neque ac tempor vehicula.
-                Aenean molestie vestibulum turpis vitae auctor. Nunc aliquet orci eu ligula vestibulum semper. Pellentesque neque nulla, sollicitudin nec
-                rhoncus non, varius et est. Praesent dolor mauris, bibendum ut massa sed, pretium pellentesque eros. Maecenas aliquet mattis dui sit amet
-                euismod.
-                <br/><br/>
+                luctus condimentum, lorem mauris pulvinar eros, a venenatis tellus erat et purus. Donec vel metus ut urna feugiat facilisis sit amet ac mauris.
+                Cras non laoreet purus, in accumsan quam. Aliquam erat volutpat. Fusce eu diam ultricies, feugiat neque ac, dapibus diam.
+                <br /><br />
+                Nam nec pharetra dui. Donec commodo neque ac tempor vehicula. Aenean molestie vestibulum turpis vitae auctor. Nunc aliquet orci eu ligula
+                vestibulum semper. Pellentesque neque nulla, sollicitudin nec rhoncus non, varius et est. Praesent dolor mauris, bibendum ut massa sed, pretium
+                pellentesque eros. Maecenas aliquet mattis dui sit amet euismod.
+                <br /><br />
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel metus ut urna feugiat facilisis sit amet ac mauris. Cras non laoreet purus,
                 in accumsan quam. Aliquam erat volutpat. Fusce eu diam ultricies, feugiat neque ac, dapibus diam. Duis tempus lacus eu lectus luctus faucibus.
                 Aliquam iaculis tortor sit amet elit tristique, eget varius ex aliquam. Praesent sed hendrerit est, in sagittis lacus. Ut accumsan, ligula vel
-                luctus condimentum, lorem mauris pulvinar eros, a venenatis tellus erat et purus. 
-                <br/><br/>
-                Nam nec pharetra dui. Donec commodo neque ac tempor vehicula.
-                Aenean molestie vestibulum turpis vitae auctor. Nunc aliquet orci eu ligula vestibulum semper. Pellentesque neque nulla, sollicitudin nec
-                rhoncus non, varius et est. Praesent dolor mauris, bibendum ut massa sed, pretium pellentesque eros. Maecenas aliquet mattis dui sit amet
-                euismod. Nunc aliquet orci eu ligula vestibulum semper. Pellentesque neque nulla, sollicitudin nec
-                rhoncus non, varius et est. Praesent dolor mauris.
-                <br/><br/>
+                luctus condimentum, lorem mauris pulvinar eros, a venenatis tellus erat et purus.
+                <br /><br />
+                Nam nec pharetra dui. Donec commodo neque ac tempor vehicula. Aenean molestie vestibulum turpis vitae auctor. Nunc aliquet orci eu ligula
+                vestibulum semper. Pellentesque neque nulla, sollicitudin nec rhoncus non, varius et est. Praesent dolor mauris, bibendum ut massa sed, pretium
+                pellentesque eros. Maecenas aliquet mattis dui sit amet euismod. Nunc aliquet orci eu ligula vestibulum semper. Pellentesque neque nulla,
+                sollicitudin nec rhoncus non, varius et est. Praesent dolor mauris.
+                <br /><br />
             </p>
         </div>
         <script>
@@ -57,6 +55,20 @@
             let moon = document.getElementById('moon');
             let mountains_behind = document.getElementById('mountains_behind');
             let mountains_front = document.getElementById('mountains_front');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', () => {
+                let value = window.scrollY;
+                stars.style.left = `${value * 0.25}px`;
+                moon.style.top = `${value * 1.05}px`;
+                mountains_behind.style.top = `${value * 0.5}px`;
+                text.style.marginRight = `${value * 2.5}px`;
+                text.style.marginTop = `${value * 1.5}px`;
+                btn.style.marginTop = `${value * 1.5}px`;
+                header.style.top = `${value * 0.8}px`;
+            });
         </script>
     </body>
 </html>
