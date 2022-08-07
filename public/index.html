@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="resources/moon-icon.png">
         <title>Moonlight Project</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="script.js"></script>
@@ -23,7 +24,6 @@
             <img src="resources/moon.png" id="moon" />
             <img src="resources/mountains_behind.png" id="mountains_behind" />
             <h2 id="text">Moonlight</h2>
-            <!-- <a href="#" id="btn">Explore</a> -->
             <button href="#" id="btn" onclick="autoScroll()">Explore</button>
             <img src="resources/mountains_front.png" id="mountains_front" />
         </section>
@@ -46,35 +46,5 @@
                 <br /><br />
             </p>
         </div>
-        <!-- <script>
-            let stars = document.getElementById('stars');
-            let moon = document.getElementById('moon');
-            let mountains_behind = document.getElementById('mountains_behind');
-            let mountains_front = document.getElementById('mountains_front');
-            let text = document.getElementById('text');
-            let btn = document.getElementById('btn');
-            let header = document.querySelector('header');
-
-            window.addEventListener('scroll', () => {
-                let value = window.scrollY;
-                stars.style.left = `${value * 0.25}px`;
-                moon.style.top = `${value * 1.05}px`;
-                mountains_behind.style.top = `${value * 0.5}px`;
-                text.style.marginRight = `${value * 2.5}px`;
-                text.style.marginTop = `${value * 1.5}px`;
-                btn.style.marginTop = `${value * 1.5}px`;
-                header.style.top = `${value * 0.8}px`;
-            });
-
-            function autoScroll() {
-                scrolldelay = setTimeout(autoScroll, 10);
-                if ((window.innerHeight + window.pageYOffset) < document.body.offsetHeight) {
-                    window.scrollTo({top: window.pageYOffset + 10, behavior: 'smooth'}); // horizontal and vertical scroll increments
-                } else {
-                    clearTimeout(scrolldelay);
-                }
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
-            }
-        </script> -->
     </body>
 </html>
