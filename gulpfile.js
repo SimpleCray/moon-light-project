@@ -5,6 +5,10 @@ gulp.task('serve', function () {
     browserSync.init({
         server: {
             baseDir: './public',
+            routes: {
+                '/': './public/index.html',
+                '/signature': './public/signature.html'
+            }
         },
     });
     gulp.watch('./public/*.html').on('change', browserSync.reload);
