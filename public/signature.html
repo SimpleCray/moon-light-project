@@ -4,12 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firstrata Finance Signature</title>
+    <style>
+      @media screen and (max-width: 768px) {
+        .signature-container {
+          width: 100% !important;
+          padding: 10px;
+        }
+        
+        .main-content {
+          flex-direction: column !important;
+        }
+        
+        .left-column {
+          width: 100% !important;
+          margin-right: 0 !important;
+          margin-bottom: 20px;
+        }
+        
+        .right-column {
+          padding-left: 0 !important;
+          border-left: none !important;
+          border-top: 2px solid rgb(195, 161, 53);
+          padding-top: 20px;
+        }
+        
+        .name {
+          font-size: 16pt !important;
+        }
+        
+        .title {
+          font-size: 10pt !important;
+        }
+        
+        .contact-info {
+          font-size: 8pt !important;
+        }
+        
+        .address {
+          font-size: 8pt !important;
+        }
+        
+        .website {
+          font-size: 14px !important;
+        }
+        
+        .disclaimer {
+          font-size: 7pt !important;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div style="width: 750px; display: flex; flex-direction: column; font-family: Calibri">
-      <div style="display: flex; margin-bottom: 20px">
+    <div class="signature-container" style="width: 750px; display: flex; flex-direction: column; font-family: Calibri">
+      <div class="main-content" style="display: flex; margin-bottom: 20px">
         <!-- Left Column -->
         <div
+          class="left-column"
           style="
             width: 240px;
             margin-right: 20px;
@@ -49,19 +99,19 @@
         </div>
 
         <!-- Right Column -->
-        <div style="flex: 1; padding-left: 20px; border-left: 2px solid rgb(195, 161, 53)">
-          <div style="font-size: 20pt; font-weight: bold; color: rgb(8, 29, 60)">{First name} {Last name}</div>
-          <div style="font-size: 11pt; color: rgb(8, 29, 60); margin-bottom: 15px; font-weight: bold; line-height: 1.1">
+        <div class="right-column" style="flex: 1; padding-left: 20px; border-left: 2px solid rgb(195, 161, 53)">
+          <div class="name" style="font-size: 20pt; font-weight: bold; color: rgb(8, 29, 60)">{First name} {Last name}</div>
+          <div class="title" style="font-size: 11pt; color: rgb(8, 29, 60); margin-bottom: 15px; font-weight: bold; line-height: 1.1">
             {RT}{Title}{/RT}
           </div>
 
-          <div style="font-size: 9pt; color: rgb(8, 29, 60); line-height: 1">
+          <div class="contact-info" style="font-size: 9pt; color: rgb(8, 29, 60); line-height: 1">
             {RT}M: <a href="tel:{Mobile}" style="color: rgb(8, 29, 60); text-decoration: none">{Mobile}</a>{/RT}<br />
             {RT}P: <a href="tel:{Phone}" style="color: rgb(8, 29, 60); text-decoration: none">{Phone}</a>{/RT}<br />
             {RT}E: <a href="mailto:{E-mail}" style="color: rgb(8, 29, 60); text-decoration: none">{E-mail}</a>{/RT}
           </div>
 
-          <div style="font-size: 9pt; color: rgb(8, 29, 60); margin-top: 15px; line-height: 1.4">
+          <div class="address" style="font-size: 9pt; color: rgb(8, 29, 60); margin-top: 15px; line-height: 1.4">
             Level 24, 101 Miller Street, North Sydney NSW 2060<br />
             Suite 2 Level 19, 695 Collins St, Docklands VIC 3008<br />
             Building 2, Gateway Office Park, 747 Lytton Road, Murarrie QLD 4172
@@ -69,6 +119,7 @@
 
           <div style="margin-top: 15px">
             <a
+              class="website"
               href="https://firstratafinance.com.au"
               style="color: rgb(195, 161, 53); text-decoration: none; font-weight: bold; font-size: 16px"
               >firstratafinance.com.au</a
@@ -78,7 +129,7 @@
       </div>
 
       <!-- Disclaimer Section -->
-      <div style="color: rgb(166, 166, 166); font-size: 8pt; line-height: 1.4; margin-top: 20px">
+      <div class="disclaimer" style="color: rgb(166, 166, 166); font-size: 8pt; line-height: 1.4; margin-top: 20px">
         This communication is intended only for the person or entity to which it is addressed and may contain
         confidential and/or privileged material. Any review, re-transmission, dissemination, or other use of, or taking
         any action in reliance on, this communication by persons or entities other than the intended recipient is
