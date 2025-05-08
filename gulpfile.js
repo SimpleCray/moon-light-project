@@ -7,7 +7,7 @@ gulp.task('serve', function () {
             baseDir: './public',
             routes: {
                 '/': './public/index.html',
-                '/signature': './public/signature.html'
+                '/signature': './public/signature-filled.html'
             }
         },
     });
